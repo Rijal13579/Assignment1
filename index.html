@@ -96,7 +96,7 @@
         <br><input class="submit" id="btn-submit" type="submit" value="SUBMIT"><br/>
       </form>
       <script>
-         var textNama = document.getElementById('ini-saya')
+        var textNama = document.getElementById('ini-saya')
         var textRole =  document.getElementById('text-role')
         var textAvailablity = document.getElementById('text-availability')
         var textUsia = document.getElementById('text-usia')
@@ -110,7 +110,6 @@
         document.getElementById('input-lokasi').value = textLokasi.innerText
         document.getElementById('input-pengalaman').value = textPengalaman.innerText
         document.getElementById('input-email').value = textEmail.innerText
-
         function handleSubmit(event) {
             var inputNama = document.getElementById('input-nama')
             var inputRole = document.getElementById('input-role')
@@ -119,6 +118,13 @@
             var inputLokasi = document.getElementById('input-lokasi')
             var inputPengalaman = document.getElementById('input-pengalaman')
             var inputEmail = document.getElementById('input-email')
+            localStorage.setItem('nama', inputNama.value)
+            localStorage.setItem('role', inputRole.value)
+            localStorage.setItem('availability', inputAvailability.value)
+            localStorage.setItem('usia', inputUsia.value)
+            localStorage.setItem('lokas', inputLokasi.value)
+            localStorage.setItem('pengalaman', inputPengalaman.value)
+            localStorage.setItem('email', inputEmail.value)
             document.getElementById('ini-saya').innerText = inputNama.value
             document.getElementById('text-role').innerText = inputRole.value
             document.getElementById('text-availability').innerText = inputAvailability.value
